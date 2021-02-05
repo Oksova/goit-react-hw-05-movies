@@ -2,7 +2,7 @@
   "name": "react-template",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Oksova.github.io/react-template",
+  "homepage": "https://Oksova.github.io/goit-react-hw-05-movies",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
@@ -11,7 +11,10 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-loader-spinner": "^4.0.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-toastify": "^7.0.3",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
