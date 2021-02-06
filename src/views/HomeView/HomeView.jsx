@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useRouteMatch } from 'react-router-dom';
-import Loader from '../../components/Loader/Loader';
+import Loader from '../Loader/Loader';
 import PageHeading from '../../components/PageHeading/PageHeading';
 import * as movieApi from '../../services/movie-api';
 import { POSTER_URL } from '../../services/movie-api';

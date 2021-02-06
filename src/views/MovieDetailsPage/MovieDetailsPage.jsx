@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 import * as movieApi from '../../services/movie-api';
 import { POSTER_URL } from '../../services/movie-api';
-import Loader from '../../components/Loader/Loader';
+import Loader from '../Loader/Loader';
 import Cast from '../Cast/Cast';
 import Reviews from '../Reviews/Reviews';
 import s from './MovieDetailsPage.module.css';

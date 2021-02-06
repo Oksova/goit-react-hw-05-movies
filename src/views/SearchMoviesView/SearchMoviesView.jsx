@@ -1,19 +1,17 @@
 import { useState, useEffect } from 'react';
 import { fetchMovies } from '../../services/movie-api';
-import Loader from '../../components/Loader/Loader';
+import Loader from '../Loader/Loader';
 import ErrorView from '../ErrorView/ErrorView';
 import MovieGalleryView from '../MovieGalleryView/MovieGalleryView';
 
-export default function SearchMoviesView({ SearchMovie, MovieName }) {
+export default function SearchMoviesView({ searchMovie, movieName }) {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
   const [status, setStatus] = useState('idle');
 
   const fetchMovieByName = name => {
     console.log(fetchMovieByName);
-    fetchMovies(name);
-    console
-      .log(fetchMovies, 'in SearchBar')
+    fetchMovies(name)
       .then(newMovies => {
         if (newMovies.total_results > 0) {
           setMovies(newMovies.results);
@@ -28,14 +26,14 @@ export default function SearchMoviesView({ SearchMovie, MovieName }) {
 
   useEffect(() => {
     console.log(useEffect, 'use Effect in SearchMovieView');
-    if (MovieName === '' && SearchMovie !== null) {
-      fetchMovieByName(SearchMovie);
+    if (movieName === '' && searchMovie !== null) {
+      fetchMovieByName(searchMovie);
       return;
     }
-    if (MovieName) {
-      fetchMovieByName(MovieName);
+    if (movieName) {
+      fetchMovieByName(movieName);
     }
-  }, [SearchMovie, MovieName]);
+  }, [searchMovie, movieName]);
 
   if (status === 'idle') {
     return 'Please enter your request';
